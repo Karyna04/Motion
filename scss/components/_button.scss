@@ -1,0 +1,53 @@
+@mixin button-variant($color, $bg, $border-color, $theme: 'dark') {
+  @if ($theme == 'dark') {
+    color: $color;
+    background-color: $bg;
+    border-color: $border-color;
+    &:hover {
+      color: darken($color, 20%);
+      background-color: darken($bg, 20%);
+      border-color: darken($border-color, 20%);
+    }
+  } @else if ($theme == 'light') {
+    color: $color;
+    background-color: $bg;
+    border-color: $border-color;
+    &:hover {
+      color: lighten($color, 20%);
+      background-color: lighten($bg, 20%);
+      border-color: lighten($border-color, 20%);
+    }
+  }
+}
+
+.button {
+  display: inline-block;
+  margin-top: 0;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font-size: 16px;
+  line-height: inherit;
+  font-family: inherit;
+  padding: 15px 16px;
+  font-weight: 400;
+  text-transform: none;
+  text-decoration: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus {
+    outline: none;
+  }
+  &-full {
+    width: 100%;
+  }
+
+  &-primary {
+    @include button-variant(#ffffff, #8d62f1, #8d62f1, 'light')
+  }
+}

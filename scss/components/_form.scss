@@ -1,0 +1,40 @@
+.form-control {
+  margin-bottom: 18px;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  border: 1px solid #413d4b;
+  opacity: 0.4;
+  padding: 10px;
+  background-color: #fff;
+  color: #413d4b;
+  margin: 0;
+  border-radius: 0;
+  font-size: inherit;
+}
+
+.input {
+  height: 45px;
+}
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  background-color: #fff;
+  color: #413d4b;
+  border-color: #000000;
+}
+
+.input:disabled,
+.textarea:disabled {
+  background-color: #f8f8f8;
+  color: #999999;
+  border-color: #999999;
+}
+
+.textarea {
+  resize: none;
+  height: 200px;
+}

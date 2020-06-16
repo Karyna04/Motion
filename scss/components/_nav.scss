@@ -1,0 +1,27 @@
+$nav-item-weight: 700;
+$nav-item-color: #000000;
+
+.nav {
+  display: inline-block;
+
+  &-list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  }
+
+  &-item {
+    padding: 0 15px;
+    font-weight: $nav-item-weight;
+    color: $nav-item-color;
+      &:hover {
+        color: #D91414;
+        border-bottom: 3px solid #D91414;
+        padding-bottom: 24px;
+      }
+  }
+  
+  &-icon-border:hover {
+    border-bottom: 3px solid transparent;
+  }
+}

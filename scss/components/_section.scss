@@ -1,0 +1,125 @@
+$section-padding: 70px;
+
+.section {
+  margin-bottom: $section-padding;
+
+  &-hero {
+  position: relative;
+  }
+
+  &-background,
+  &-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &-background {
+    z-index: -2;
+  }
+
+  &-background img {
+    height: 100%;
+  }
+
+  &-overlay {
+    z-index: -1;
+  }
+  
+  &-hero  &-foreground {
+    min-height: 520px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  &-hero  &-body {
+    max-width: 400px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: #ffffff;
+  }
+  &-subtitle {
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: capitalize;
+    line-height: 45px;
+    margin-bottom: 0;
+  }
+  &-description {
+    margin-bottom: 30px;
+    line-height: 25px;
+  }
+  &-title {
+    font-weight: 700;
+  }
+  &-border {
+    border-left: 1px solid #D91414;
+  }
+  &-spillt &-description {
+    margin: 0;
+  }
+  &-services &-title {
+    text-align: center;
+    padding: 30px 0;
+    font-weight: 900; 
+  }
+  &-form &-title {
+    text-align: center;
+    padding: 30px 0;
+    font-weight: 900;
+  }
+  &-footer {
+    background-color: #000000;
+    margin: 0;
+    color: #ffffff;
+  }
+  &-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+  }
+  &-footer {
+    padding: 40px 0;
+  }
+  &-footer &-title {
+    display: inline-block;
+    padding-right: 5px;
+  }
+  &-icons {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+  }
+  &-icon-style {
+    margin: 0 15px;
+    padding: 8px 10px;
+    font-size: 20px;
+    color: #000000;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    background-color: #ffffff;
+    &:hover {
+      border-color: #D91414;
+      background-color: #D91414;
+      color: #ffffff;
+    }
+  }
+  &-icons &-padding {
+    padding: 8px 12px;
+  }
+}
